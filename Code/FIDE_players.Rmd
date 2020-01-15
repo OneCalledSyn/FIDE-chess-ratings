@@ -1,0 +1,44 @@
+---
+title: "Chess Over Time"
+author: "Jay Shapiro"
+date: "TBD"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+yeah so uh let's do this thing
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+library(plyr)
+library(data.table)
+library(readr)
+library(dplyr)
+library(ggfortify)
+
+#Grab the file names of the ratings lists for each month
+myfiles <- list.files(path = "C:/Users/jays/Desktop/FIDE/Ratings/", 
+                      pattern = "*.txt", full.names = TRUE)
+
+#Instantiate an empty data frame to jam the raw data into
+FIDE_players <- data.frame()
+
+#Loop through the files to build one dataframe
+for (lambda in c(1:2)) {
+  location <- myfiles[lambda]
+  temp <- fread(file = location, 
+                sep = ";", fill = TRUE, header = TRUE)
+  
+  FIDE_players[lambda, 1:13] <- temp
+}
+
+```
+
+<br><br>
+
+Hee haw!

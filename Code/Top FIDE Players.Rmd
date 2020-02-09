@@ -1,0 +1,43 @@
+---
+title: "Chess Over Time"
+author: "Jay Shapiro"
+date: "TBD"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Reminder: Figure out how to parse data with several different delimiters
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+library(plyr)
+library(data.table)
+library(readr)
+library(dplyr)
+library(ggfortify)
+
+#Grab the file names of the ratings lists for each month
+myfiles <- list.files(path = "C:/Users/OneCalledSyn/Desktop/FIDE/", 
+                      pattern = "*.txt", full.names = TRUE)
+
+#Instantiate an empty data frame to jam the raw data into
+FIDE_players <- data.frame()
+
+#Loop through the files to build one dataframe (ELO not found?)
+for (lambda in c(1:2)) {
+  location <- myfiles[lambda]
+  temp <- fread(file = location, 
+                sep = "", fill = TRUE, header = TRUE)
+  temp <- arrange(ELO) %>% 
+    top_n(n = 100)
+  
+  FIDE_players[(lambda*100 - 99):(lambda*100) , 1:13] <- temp
+}
+```
+
+<br><br>

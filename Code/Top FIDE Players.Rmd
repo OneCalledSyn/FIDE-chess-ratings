@@ -22,22 +22,31 @@ library(dplyr)
 library(ggfortify)
 
 #Grab the file names of the ratings lists for each month
-myfiles <- list.files(path = "C:/Users/OneCalledSyn/Desktop/FIDE/", 
+myfiles <- list.files(path = "C:/Users/OneCalledSyn/Desktop/FIDE/Historical_Ratings", 
                       pattern = "*.txt", full.names = TRUE)
 
-#Instantiate an empty data frame to jam the raw data into
 FIDE_players <- data.frame()
 
-#Loop through the files to build one dataframe (ELO not found?)
-for (lambda in c(1:2)) {
+for (lambda in c(1:length(myfiles))) {
   location <- myfiles[lambda]
   temp <- fread(file = location, 
-                sep = "", fill = TRUE, header = TRUE)
-  temp <- arrange(ELO) %>% 
-    top_n(n = 100)
+                sep = "\t", fill = TRUE, header = TRUE)
   
-  FIDE_players[(lambda*100 - 99):(lambda*100) , 1:13] <- temp
+  FIDE_players <- rbind(FIDE_players, temp)
+  
 }
+# FIDE_players <- read.delim("C:/Users/OneCalledSyn/Desktop/FIDE/july_2000.txt", 
+#                           header = TRUE, sep = "\t")
+str(FIDE_players)
+dim(FIDE_players)
+head(FIDE_players)
+
+p <- ggplot(FIDE_players[1:105, ], aes(x = `B-Year`, y = Rating, color = Games)) + geom_point()
+
+ggplotly(p)
+
+rank_1_FIDE_players <- FIDE_players[Rank == 1]
+
 ```
 
 <br><br>

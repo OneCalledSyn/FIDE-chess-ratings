@@ -1,5 +1,5 @@
 ---
-title: "Chess Over Time"
+title: "Top Modern Chess Players Over Time"
 author: "Jay Shapiro"
 date: "TBD"
 output: html_document
@@ -41,9 +41,54 @@ str(FIDE_players)
 dim(FIDE_players)
 head(FIDE_players)
 
-p <- ggplot(FIDE_players[1:105, ], aes(x = `B-Year`, y = Rating, color = Games)) + geom_point()
+FIDE_players <- FIDE_players %>%
+  mutate(Date = "")
 
-ggplotly(p)
+FIDE_players[1:105, ]$Date <- "April 2002"
+FIDE_players[106:206, ]$Date <- "April 2003"
+FIDE_players[207:306, ]$Date <- "April 2004"
+FIDE_players[307:407, ]$Date <- "April 2005"
+
+rank_vs_rating <- FIDE_players[1:407, ] %>%
+  plot_ly(
+    x = ~Rank,
+    y = ~Rating,
+    size = ~Games,
+    color = ~Country,
+    frame = ~Date,
+    text = ~Name  ,
+    hovertemplate = paste("<b>%{text}</b><br><br>",
+                          "%{yaxis.title.text}: %{y}<br>",
+                          "%{xaxis.title.text}: %{x}<br>",
+                          "<extra></extra>"),
+    type = 'scatter',
+    mode = 'markers'
+)  %>%
+    animation_opts(frame = 1500, easing = NULL, redraw = FALSE) %>%
+      layout(scene = list(xaxis = list(title = 'Global Rank'),
+                          yaxis = list(title = 'ELO Rating')),
+                          title = "Top Chess Players")
+
+rank_vs_rating
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+april_2002 <- FIDE_players[1:105, ] %>%
+  plot_ly(
+    x = ~Rank, 
+    y = ~Rating, 
+    size = ~Rank, 
+    color = ~Games, 
+    #frame = ~season, 
+    text = ~Name, 
+    hovertemplate = paste("<b>%{text}</b><br><br>",
+                          "%{yaxis.title.text}: %{y}<br>",
+                          "%{xaxis.title.text}: %{x}<br>",
+                          "<extra></extra>"),
+    type = 'scatter',
+    mode = 'markers')
+
+april_2002
 
 rank_1_FIDE_players <- FIDE_players[Rank == 1]
 

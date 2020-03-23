@@ -1,0 +1,84 @@
+---
+title: "Strongest Modern Chess Players per Year"
+author: "Jay Shapiro"
+date: "3/22/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+library(data.table)
+library(readr)
+library(dplyr)
+
+#Grab the file names of the ratings lists for each month
+myfiles <- list.files(path = "C:/Users/OneCalledSyn/Desktop/FIDE/Historical_Ratings/January", 
+                      pattern = "*.txt", full.names = TRUE)
+
+top_n_players <- 25
+
+FIDE_players <- data.frame()
+
+for (lambda in c(1:length(myfiles))) {
+  location <- myfiles[lambda]
+  temp <- fread(file = location, 
+                sep = "\t", fill = TRUE, header = TRUE, nrows = top_n_players) %>%
+    mutate(Year = as.integer(lambda + 2000))
+  
+  FIDE_players <- rbind(FIDE_players, temp)
+  
+}
+
+FIDE_players_means <- FIDE_players %>%
+  group_by(Year) %>%
+  summarise(average_rating = mean(Rating), average_age = mean(Year - as.integer(`B-Year`)), average_games = mean(Games)) %>%
+  ungroup()
+
+FIDE_players <- FIDE_players %>% mutate(Year = as.factor(Year))
+
+age <- ggplot(data = FIDE_players_means, aes(x = Year, y = average_age)) + geom_point() + geom_line(color = "red") + 
+  labs(title = "Average Age by Year", x = "Year", y = "Average Age") + theme_dark()
+
+age <- ggplotly(age)
+
+age
+
+rating <- plot_ly(
+  data = FIDE_players,
+  x = ~Year,
+  y = ~Rating,
+  color = ~Year,
+  type = "box",
+  boxpoints = 'all',
+  text = ~Name) %>%
+  layout(scene = list(xaxis = list(title = 'Year'),
+                      yaxis = list(title = 'Rating')),
+         title = 'Top 25 Chess Players<br>Source: <a href = "https://ratings.fide.com/toplist.phtml">FIDE January Rating Lists</a>')
+
+rating
+
+rank_vs_rating <- FIDE_players %>%
+  plot_ly(
+    x = ~Rank,
+    y = ~Rating,
+    color = ~Year,
+    text = ~Name,
+    hovertemplate = paste("<b>%{text}</b><br><br>",
+                          "%{yaxis.title.text}: %{y}<br>",
+                          "%{xaxis.title.text}: %{x}<br>",
+                          "<extra></extra>"),
+    type = 'scatter',
+    mode = 'markers'
+)  %>% layout(scene = list(xaxis = list(title = 'Global Rank'),
+                          yaxis = list(title = 'ELO Rating')),
+                          title = "Top 25 Chess Players<br>Using January Rating Lists")
+
+rank_vs_rating
+
+```

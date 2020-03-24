@@ -1,0 +1,101 @@
+Rank	Name	Title	Country	Rating	Games	B-Year
+ 1	 Kasparov, Gary	 g	 RUS	 2849	 0	 1963
+ 2	 Anand, Viswanathan	 g	 IND	 2790	 16	 1969
+ 3	 Kramnik, Vladimir	 g	 RUS	 2772	 0	 1975
+ 4	 Adams, Michael	 g	 ENG	 2746	 35	 1971
+ 5	 Leko, Peter	 g	 HUN	 2745	 16	 1979
+ 6	 Morozevich, Alexander	 g	 RUS	 2745	 16	 1977
+ 7	 Shirov, Alexei	 g	 ESP	 2718	 57	 1972
+ 8	 Topalov, Veselin	 g	 BUL	 2718	 26	 1975
+ 9	 Ivanchuk, Vassily	 g	 UKR	 2717	 39	 1969
+ 10	 Gelfand, Boris	 g	 ISR	 2712	 37	 1968
+ 11	 Bareev, Evgeny	 g	 RUS	 2709	 22	 1966
+ 12	 Van Wely, Loek	 g	 NED	 2700	 62	 1972
+ 13	 Svidler, Peter	 g	 RUS	 2695	 40	 1976
+ 14	 Gurevich, Mikhail	 g	 BEL	 2694	 35	 1959
+ 15	 Kasimdzhanov, Rustam	 g	 UZB	 2693	 27	 1979
+ 16	 Khalifman, Alexander	 g	 RUS	 2690	 30	 1966
+ 17	 Smirin, Ilia	 g	 ISR	 2686	 33	 1968
+ 18	 Dreev, Alexey	 g	 RUS	 2685	 13	 1969
+ 19	 Bologan, Viktor	 g	 MDA	 2684	 22	 1971
+ 20	 Karpov, Anatoly	 g	 RUS	 2679	 15	 1951
+ 21	 Ponomariov, Ruslan	 g	 UKR	 2677	 45	 1983
+ 22	 Georgiev, Kiril	 g	 BUL	 2676	 46	 1965
+ 23	 Polgar, Judit (GM)	 wg	 HUN	 2676	 34	 1976
+ 24	 Short, Nigel D.	 g	 ENG	 2676	 29	 1965
+ 25	 Tkachiev, Vladislav	 g	 FRA	 2672	 15	 1973
+ 26	 Ye, Jiangchuan	 g	 CHN	 2671	 13	 1960
+ 27	 Azmaiparashvili, Zurab	 g	 GEO	 2670	 39	 1960
+ 28	 Grischuk, Alexander	 g	 RUS	 2663	 38	 1983
+ 29	 Movsesian, Sergei	 g	 CZE	 2661	 37	 1978
+ 30	 Sokolov, Ivan	 g	 BIH	 2659	 67	 1968
+ 31	 Krasenkow, Michal	 g	 POL	 2658	 42	 1963
+ 32	 Lautier, Joel	 g	 FRA	 2658	 35	 1973
+ 33	 Onischuk, Alexander	 g	 UKR	 2658	 20	 1975
+ 34	 Rublevsky, Sergei	 g	 RUS	 2657	 26	 1974
+ 35	 Akopian, Vladimir	 g	 ARM	 2656	 8	 1971
+ 36	 Xu, Jun	 g	 CHN	 2655	 16	 1962
+ 37	 Nikolic, Predrag	 g	 BIH	 2652	 45	 1960
+ 38	 Nenashev, Alexander	 g	 UZB	 2649	 18	 1962
+ 39	 Peng, Xiaomin	 g	 CHN	 2648	 17	 1973
+ 40	 Jussupow, Artur	 g	 GER	 2645	 21	 1960
+ 41	 Vaganian, Rafael A	 g	 ARM	 2641	 26	 1951
+ 42	 Almasi, Zoltan	 g	 HUN	 2640	 42	 1976
+ 43	 Andersson, Ulf	 g	 SWE	 2640	 26	 1951
+ 44	 Seirawan, Yasser	 g	 USA	 2640	 21	 1960
+ 45	 Shipov, Sergei	 g	 RUS	 2640	 0	 1966
+ 46	 Korchnoi, Viktor	 g	 SUI	 2639	 24	 1931
+ 47	 Sakaev, Konstantin	 g	 RUS	 2639	 18	 1974
+ 48	 Kharlov, Andrei	 g	 RUS	 2639	 15	 1968
+ 49	 Beliavsky, Alexander G	 g	 SLO	 2638	 43	 1953
+ 50	 Ehlvest, Jaan	 g	 EST	 2638	 34	 1962
+ 51	 Crisan, Alexandru	 g	 ROM	 2635	 0	 1962
+ 52	 Sadler, Matthew	 g	 ENG	 2633	 6	 1974
+ 53	 Piket, Jeroen	 g	 NED	 2632	 54	 1969
+ 54	 Lastin, Alexander	 g	 RUS	 2631	 34	 1976
+ 55	 Dautov, Rustem	 g	 GER	 2631	 15	 1965
+ 56	 Zvjaginsev, Vadim	 g	 RUS	 2631	 7	 1976
+ 57	 Avrukh, Boris	 g	 ISR	 2630	 29	 1978
+ 58	 Rozentalis, Eduardas	 g	 LTU	 2630	 29	 1963
+ 59	 Timman, Jan H	 g	 NED	 2629	 38	 1951
+ 60	 Tregubov, Pavel V.	 g	 RUS	 2628	 30	 1971
+ 61	 Gulko, Boris F	 g	 USA	 2622	 28	 1947
+ 62	 Rustemov, Alexander	 g	 RUS	 2620	 62	 1973
+ 63	 Filippov, Valerij	 g	 RUS	 2619	 16	 1975
+ 64	 Hansen, Curt	 g	 DEN	 2619	 13	 1964
+ 65	 Bauer, Christian	 g	 FRA	 2618	 65	 1977
+ 66	 Ftacnik, Lubomir	 g	 SVK	 2618	 36	 1957
+ 67	 Bacrot, Etienne	 g	 FRA	 2618	 21	 1983
+ 68	 Najer, Evgeniy	 g	 RUS	 2616	 32	 1977
+ 69	 Huebner, Robert Dr.	 g	 GER	 2616	 24	 1948
+ 70	 Malakhov, Vladimir	 g	 RUS	 2613	 57	 1980
+ 71	 Baklan, Vladimir	 g	 UKR	 2613	 20	 1978
+ 72	 Smagin, Sergey	 g	 RUS	 2613	 0	 1958
+ 73	 Khenkin, Igor	 g	 GER	 2612	 28	 1968
+ 74	 Vladimirov, Evgeny	 g	 KAZ	 2612	 22	 1957
+ 75	 Aleksandrov, Aleksej	 g	 BLR	 2610	 33	 1973
+ 76	 Landa, Konstantin	 g	 RUS	 2610	 7	 1972
+ 77	 Lutz, Christopher	 g	 GER	 2609	 28	 1971
+ 78	 Shabalov, Alexander	 g	 USA	 2609	 24	 1967
+ 79	 Milos, Gilberto	 g	 BRA	 2608	 25	 1963
+ 80	 Magomedov, Magaram	 g	 RUS	 2608	 0	 1966
+ 81	 Lputian, Smbat G	 g	 ARM	 2607	 33	 1958
+ 82	 Kaidanov, Gregory S	 g	 USA	 2607	 20	 1959
+ 83	 Zhang, Zhong	 g	 CHN	 2607	 0	 1978
+ 84	 Sutovsky, Emil	 g	 ISR	 2605	 11	 1977
+ 85	 Milov, Vadim	 g	 SUI	 2604	 68	 1972
+ 86	 Marin, Mihail	 g	 ROM	 2604	 45	 1965
+ 87	 Speelman, Jonathan S.	 g	 ENG	 2604	 22	 1956
+ 88	 Dorfman, Josif D	 g	 FRA	 2602	 22	 1952
+ 89	 Hracek, Zbynek	 g	 CZE	 2602	 15	 1970
+ 90	 Sasikiran, Krishnan	 g	 IND	 2601	 35	 1981
+ 91	 Najdoski, Toni	 g	 MKD	 2601	 24	 1970
+ 92	 Korneev, Oleg	 g	 RUS	 2600	 76	 1969
+ 93	 Psakhis, Lev	 g	 ISR	 2598	 36	 1958
+ 94	 Baburin, Alexander	 g	 IRL	 2598	 20	 1967
+ 95	 Tiviakov, Sergei	 g	 NED	 2597	 39	 1973
+ 96	 Shariyazdanov, Andrey	 g	 RUS	 2596	 36	 1976
+ 97	 Hodgson, Julian M.	 g	 ENG	 2596	 21	 1963
+ 98	 Novikov, Igor A	 g	 UKR	 2596	 10	 1962
+ 99	 Nisipeanu, Liviu-Dieter	 g	 ROM	 2596	 9	 1976
+ 100	 Tukmakov, Vladimir B	 g	 UKR	 2595	 57	 1946

@@ -1,13 +1,37 @@
 ---
-title: "Strongest Modern Chess Players per Year"
+title: "Top Chess Players of the 21st Century"
 author: "Jay Shapiro"
-date: "3/22/2020"
-output: html_document
+date: "3/24/2020"
+output: 
+  html_document:
+    theme: sandstone
+  pdf_document: default  
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+<br><br>
+
+## Introduction
+
+<br><br>
+
+Exploratory analysis of the highest-rated modern chess players from every year starting in January 2001. The ratings are pulled from the January official ratings list on FIDE's website, which can be found here: <a href = "https://ratings.fide.com/toplist.phtml">FIDE Top Rating Lists</a>. I have arbitrarily selected to examine only the 25 highest ELO ratings from the January rating lists for this report, although the underlying code can examine any number of players from the rating lists by changing a single variable value (top_n_players <- 25).
+
+<br><br>
+
+## Data Visualization
+
+<br><br>
+
+### Section I: Averages
+
+<br><br>
+
+How old is the typical elite player? How many official, rated games does an elite typically play each month? How has the strength of the elite players changed over the years?
+
+<br><br>
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -42,14 +66,61 @@ FIDE_players_means <- FIDE_players %>%
 
 FIDE_players <- FIDE_players %>% mutate(Year = as.factor(Year))
 
-age <- ggplot(data = FIDE_players_means, aes(x = Year, y = average_age)) + geom_point() + geom_line(color = "red") + 
+#Average age by Year
+avg_age <- ggplot(data = FIDE_players_means, aes(x = Year, y = average_age)) + geom_point() + geom_line(color = "red") + 
   labs(title = "Average Age by Year", x = "Year", y = "Average Age") + theme_dark()
 
-age <- ggplotly(age)
+avg_age <- ggplotly(avg_age)
 
-age
+avg_age
 
-rating <- plot_ly(
+```
+
+<br><br>
+
+We can see that the average elite chess player is usually in their late 20s or early 30s. There is some up and down over the years, but the range of the averages is fairly small. 
+
+<br><br>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+#Average rating by year
+avg_rating <- ggplot(data = FIDE_players_means, aes(x = Year, y = average_rating)) + geom_point() + geom_line(color = "blue") + labs(title = "Average Rating by Year", x = "Year", y = "Average Rating") + theme_dark()
+
+avg_rating <- ggplotly(avg_rating)
+
+avg_rating
+
+```
+
+<br><br>
+
+The average ELO rating of the top players has risen steadily for the majority of the past 20 years, up almost 50 points from the turn of the century. 
+
+<br><br>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+#Average games by Year
+avg_games <- ggplot(data = FIDE_players_means, aes(x = Year, y = average_games)) + geom_point() + geom_line(color = "green") +
+  labs(title = "Average Games by Year", x = "Year", y = "Average Games") + theme_dark()
+
+avg_games <- ggplotly(avg_games)
+
+avg_games
+
+```
+
+<br><br>
+
+### Section II: Distributions
+
+<br><br>
+
+Lets check out some player distributions for different statistics such as player age, ELO rating, and games played in a one month period.
+
+<br><br>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+rating_dist <- plot_ly(
   data = FIDE_players,
   x = ~Year,
   y = ~Rating,
@@ -59,10 +130,64 @@ rating <- plot_ly(
   text = ~Name) %>%
   layout(scene = list(xaxis = list(title = 'Year'),
                       yaxis = list(title = 'Rating')),
-         title = 'Top 25 Chess Players<br>Source: <a href = "https://ratings.fide.com/toplist.phtml">FIDE January Rating Lists</a>')
+         title = 'Rating Distribution by Year')
 
-rating
+rating_dist
 
+```
+
+<br><br>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+games_dist <- plot_ly(
+  data = FIDE_players,
+  x = ~Year,
+  y = ~Games,
+  color = ~Year,
+  type = "box",
+  boxpoints = 'all',
+  text = ~Name) %>%
+  layout(scene = list(xaxis = list(title = 'Year'),
+                      yaxis = list(title = 'Games')),
+         title = 'Monthly Games Played by Year')
+
+games_dist
+
+```
+
+<br><br>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+FIDE_players <- FIDE_players %>%
+  mutate(Age = as.integer(Year) - as.integer(`B-Year`) + 2000)
+
+age_dist <- plot_ly(
+  data = FIDE_players,
+  x = ~Year,
+  y = ~Age,
+  color = ~Year,
+  type = "box",
+  boxpoints = 'all',
+  text = ~Name) %>%
+  layout(scene = list(xaxis = list(title = 'Year'),
+                      yaxis = list(title = 'Age')),
+         title = 'Age Distribution by Year')
+
+age_dist
+
+```
+
+<br><br>
+
+### Section III: Per Rank Values
+
+<br><br>
+
+Next, we will examine the distribution of rating, age, and games played at each rank, 1-25, over the past 20 years.
+
+<br><br>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 rank_vs_rating <- FIDE_players %>%
   plot_ly(
     x = ~Rank,
@@ -77,8 +202,85 @@ rank_vs_rating <- FIDE_players %>%
     mode = 'markers'
 )  %>% layout(scene = list(xaxis = list(title = 'Global Rank'),
                           yaxis = list(title = 'ELO Rating')),
-                          title = "Top 25 Chess Players<br>Using January Rating Lists")
+                          title = 'Rating by Rank')
 
 rank_vs_rating
 
+```
+
+<br><br>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+rank_vs_age <- FIDE_players %>%
+  plot_ly(
+    x = ~Rank,
+    y = ~Age,
+    color = ~Year,
+    text = ~Name,
+    hovertemplate = paste("<b>%{text}</b><br><br>",
+                          "%{yaxis.title.text}: %{y}<br>",
+                          "%{xaxis.title.text}: %{x}<br>",
+                          "<extra></extra>"),
+    type = 'scatter',
+    mode = 'markers'
+)  %>% layout(scene = list(xaxis = list(title = 'Global Rank'),
+                          yaxis = list(title = 'ELO Rating')),
+                          title = 'Age by Rank')
+
+rank_vs_age
+
+```
+
+<br><br>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+rank_vs_games <- FIDE_players %>%
+  plot_ly(
+    x = ~Rank,
+    y = ~Games,
+    color = ~Year,
+    text = ~Name,
+    hovertemplate = paste("<b>%{text}</b><br><br>",
+                          "%{yaxis.title.text}: %{y}<br>",
+                          "%{xaxis.title.text}: %{x}<br>",
+                          "<extra></extra>"),
+    type = 'scatter',
+    mode = 'markers'
+)  %>% layout(scene = list(xaxis = list(title = 'Global Rank'),
+                          yaxis = list(title = 'ELO Rating')),
+                          title = 'Games Played by Rank')
+
+rank_vs_games
+
+```
+
+<br><br>
+
+### Section IV: Top List Appearances
+
+<br><br>
+
+All players who appeared on the January lists at least 10 times are displayed below:
+
+<br><br>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+appearances <- FIDE_players %>%
+  group_by(Name) %>%
+  summarise(Appearances = n()) %>%
+  ungroup() %>%
+  filter(Appearances >= 10) %>%
+  ggplot(aes(x = Name, y = Appearances, color = Name)) + geom_col() + theme(axis.text.x = element_blank()) + labs(title = "Most Appearances", x = "Player", y = "Appearances")
+
+appearances <- ggplotly(appearances)
+
+appearances
+
+```
+
+<br><br>
+
+```{r echo = FALSE}
+sessionInfo()
 ```

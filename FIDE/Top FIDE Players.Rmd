@@ -1,0 +1,94 @@
+---
+title: "Top Modern Chess Players Over Time"
+author: "Jay Shapiro"
+date: "TBD"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Reminder: Figure out how to parse data with several different delimiters
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+library(data.table)
+library(readr)
+library(dplyr)
+
+#Grab the file names of the ratings lists for each month
+myfiles <- list.files(path = "C:/Users/OneCalledSyn/Desktop/FIDE/Historical_Ratings", 
+                      pattern = "*.txt", full.names = TRUE)
+
+FIDE_players <- data.frame()
+
+for (lambda in c(1:length(myfiles))) {
+  location <- myfiles[lambda]
+  temp <- fread(file = location, 
+                sep = "\t", fill = TRUE, header = TRUE)
+  
+  FIDE_players <- rbind(FIDE_players, temp)
+  
+}
+# FIDE_players <- read.delim("C:/Users/OneCalledSyn/Desktop/FIDE/july_2000.txt", 
+#                           header = TRUE, sep = "\t")
+str(FIDE_players)
+dim(FIDE_players)
+head(FIDE_players)
+
+FIDE_players <- FIDE_players %>%
+  mutate(Date = "")
+
+FIDE_players[1:105, ]$Date <- "April 2002"
+FIDE_players[106:206, ]$Date <- "April 2003"
+FIDE_players[207:306, ]$Date <- "April 2004"
+FIDE_players[307:407, ]$Date <- "April 2005"
+
+rank_vs_rating <- FIDE_players[1:407, ] %>%
+  plot_ly(
+    x = ~Rank,
+    y = ~Rating,
+    color = ~Country,
+    frame = ~Date,
+    text = ~Name,
+    hovertemplate = paste("<b>%{text}</b><br><br>",
+                          "%{yaxis.title.text}: %{y}<br>",
+                          "%{xaxis.title.text}: %{x}<br>",
+                          "<extra></extra>"),
+    type = 'scatter',
+    mode = 'markers'
+)  %>%
+    animation_opts(frame = 1500, easing = NULL, redraw = FALSE) %>%
+      layout(scene = list(xaxis = list(title = 'Global Rank'),
+                          yaxis = list(title = 'ELO Rating')),
+                          title = "Top Chess Players")
+
+rank_vs_rating
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+april_2002 <- FIDE_players[1:105, ] %>%
+  plot_ly(
+    x = ~Rank, 
+    y = ~Rating, 
+    size = ~Rank, 
+    color = ~Games, 
+    #frame = ~season, 
+    text = ~Name, 
+    hovertemplate = paste("<b>%{text}</b><br><br>",
+                          "%{yaxis.title.text}: %{y}<br>",
+                          "%{xaxis.title.text}: %{x}<br>",
+                          "<extra></extra>"),
+    type = 'scatter',
+    mode = 'markers')
+
+april_2002
+
+rank_1_FIDE_players <- FIDE_players[Rank == 1]
+
+```
+
+<br><br>

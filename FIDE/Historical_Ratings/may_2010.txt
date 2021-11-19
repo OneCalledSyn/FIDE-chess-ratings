@@ -1,0 +1,104 @@
+Rank	Name	Title	Country	Rating	Games	B-Year
+ 1	 Carlsen, Magnus	 g	 NOR	 2813	 0	 1990
+ 2	 Topalov, Veselin	 g	 BUL	 2812	 10	 1975
+ 3	 Kramnik, Vladimir	 g	 RUS	 2790	 0	 1975
+ 4	 Anand, Viswanathan	 g	 IND	 2789	 2	 1969
+ 5	 Aronian, Levon	 g	 ARM	 2783	 10	 1982
+ 6	 Mamedyarov, Shakhriyar	 g	 AZE	 2763	 4	 1985
+ 7	 Grischuk, Alexander	 g	 RUS	 2760	 18	 1983
+ 8	 Wang, Yue	 g	 CHN	 2752	 7	 1987
+ 9	 Eljanov, Pavel	 g	 UKR	 2751	 20	 1983
+ 10	 Shirov, Alexei	 g	 ESP	 2742	 10	 1972
+ 11	 Gelfand, Boris	 g	 ISR	 2741	 16	 1968
+ 12	 Ivanchuk, Vassily	 g	 UKR	 2741	 10	 1969
+ 13	 Radjabov, Teimour	 g	 AZE	 2740	 0	 1987
+ 14	 Karjakin, Sergey	 g	 RUS	 2739	 7	 1990
+ 15	 Svidler, Peter	 g	 RUS	 2735	 15	 1976
+ 16	 Leko, Peter	 g	 HUN	 2735	 0	 1979
+ 17	 Gashimov, Vugar	 g	 AZE	 2734	 14	 1986
+ 18	 Ponomariov, Ruslan	 g	 UKR	 2733	 7	 1983
+ 19	 Nakamura, Hikaru	 g	 USA	 2733	 4	 1987
+ 20	 Almasi, Zoltan	 g	 HUN	 2725	 11	 1976
+ 21	 Jakovenko, Dmitry	 g	 RUS	 2725	 10	 1983
+ 22	 Malakhov, Vladimir	 g	 RUS	 2722	 12	 1980
+ 23	 Wang, Hao	 g	 CHN	 2722	 10	 1989
+ 24	 Navara, David	 g	 CZE	 2718	 24	 1985
+ 25	 Movsesian, Sergei	 g	 SVK	 2717	 35	 1978
+ 26	 Jobava, Baadur	 g	 GEO	 2715	 11	 1983
+ 27	 Morozevich, Alexander	 g	 RUS	 2715	 0	 1977
+ 28	 Dominguez Perez, Leinier	 g	 CUB	 2713	 0	 1983
+ 29	 Bacrot, Etienne	 g	 FRA	 2710	 25	 1983
+ 30	 Vachier-Lagrave, Maxime	 g	 FRA	 2710	 15	 1990
+ 31	 Tomashevsky, Evgeny	 g	 RUS	 2708	 18	 1987
+ 32	 Vitiugov, Nikita	 g	 RUS	 2707	 18	 1987
+ 33	 Motylev, Alexander	 g	 RUS	 2704	 21	 1979
+ 34	 Rublevsky, Sergei	 g	 RUS	 2704	 9	 1974
+ 35	 Vallejo Pons, Francisco	 g	 ESP	 2703	 30	 1982
+ 36	 Kamsky, Gata	 g	 USA	 2702	 9	 1974
+ 37	 Alekseev, Evgeny	 g	 RUS	 2700	 20	 1985
+ 38	 Onischuk, Alexander	 g	 USA	 2699	 9	 1975
+ 39	 Kasimdzhanov, Rustam	 g	 UZB	 2699	 3	 1979
+ 40	 Nielsen, Peter Heine	 g	 DEN	 2698	 9	 1973
+ 41	 Adams, Michael	 g	 ENG	 2697	 19	 1971
+ 42	 Nepomniachtchi, Ian	 g	 RUS	 2695	 20	 1990
+ 43	 Akopian, Vladimir	 g	 ARM	 2694	 11	 1971
+ 44	 Sasikiran, Krishnan	 g	 IND	 2690	 6	 1981
+ 45	 Fressinet, Laurent	 g	 FRA	 2689	 28	 1981
+ 46	 Le, Quang Liem	 g	 VIE	 2687	 13	 1991
+ 47	 Naiditsch, Arkadij	 g	 GER	 2686	 34	 1985
+ 48	 Short, Nigel D	 g	 ENG	 2685	 9	 1965
+ 49	 Miroshnichenko, Evgenij	 g	 UKR	 2684	 4	 1978
+ 50	 Polgar, Judit	 g	 HUN	 2682	 0	 1976
+ 51	 Bu, Xiangzhi	 g	 CHN	 2681	 3	 1985
+ 52	 Kurnosov, Igor	 g	 RUS	 2680	 28	 1985
+ 53	 Efimenko, Zahar	 g	 UKR	 2677	 29	 1985
+ 54	 Timofeev, Artyom	 g	 RUS	 2677	 18	 1985
+ 55	 Sargissian, Gabriel	 g	 ARM	 2677	 11	 1983
+ 56	 Berkes, Ferenc	 g	 HUN	 2676	 19	 1985
+ 57	 Caruana, Fabiano	 g	 ITA	 2675	 21	 1992
+ 58	 Riazantsev, Alexander	 g	 RUS	 2674	 20	 1985
+ 59	 Nisipeanu, Liviu-Dieter	 g	 ROU	 2672	 19	 1976
+ 60	 Ganguly, Surya Shekhar	 g	 IND	 2672	 0	 1983
+ 61	 Inarkiev, Ernesto	 g	 RUS	 2669	 18	 1985
+ 62	 Moiseenko, Alexander	 g	 UKR	 2669	 17	 1980
+ 63	 Bruzon Batista, Lazaro	 g	 CUB	 2668	 27	 1982
+ 64	 Bologan, Viktor	 g	 MDA	 2668	 21	 1971
+ 65	 Grachev, Boris	 g	 RUS	 2667	 17	 1986
+ 66	 Ni, Hua	 g	 CHN	 2667	 7	 1983
+ 67	 So, Wesley	 g	 PHI	 2665	 0	 1993
+ 68	 Roiz, Michael	 g	 ISR	 2664	 27	 1983
+ 69	 Volokitin, Andrei	 g	 UKR	 2664	 25	 1986
+ 70	 Najer, Evgeniy	 g	 RUS	 2663	 28	 1977
+ 71	 Areshchenko, Alexander	 g	 UKR	 2663	 22	 1986
+ 72	 Bareev, Evgeny	 g	 RUS	 2663	 11	 1966
+ 73	 Wojtaszek, Radoslaw	 g	 POL	 2663	 5	 1987
+ 74	 Georgiev, Kiril	 g	 BUL	 2662	 24	 1965
+ 75	 Sutovsky, Emil	 g	 ISR	 2661	 11	 1977
+ 76	 Harikrishna, P.	 g	 IND	 2660	 0	 1986
+ 77	 Smeets, Jan	 g	 NED	 2659	 6	 1985
+ 78	 Khismatullin, Denis	 g	 RUS	 2657	 18	 1984
+ 79	 Zvjaginsev, Vadim	 g	 RUS	 2656	 18	 1976
+ 80	 Avrukh, Boris	 g	 ISR	 2656	 0	 1978
+ 81	 Dreev, Alexey	 g	 RUS	 2655	 21	 1969
+ 82	 Fridman, Daniel	 g	 GER	 2654	 36	 1976
+ 83	 Sokolov, Ivan	 g	 BIH	 2654	 25	 1968
+ 84	 Van Wely, Loek	 g	 NED	 2653	 13	 1972
+ 85	 Mamedov, Rauf	 g	 AZE	 2653	 11	 1988
+ 86	 Zhou, Jianchao	 g	 CHN	 2652	 4	 1988
+ 87	 Korobov, Anton	 g	 UKR	 2649	 13	 1985
+ 88	 Kobalia, Mikhail	 g	 RUS	 2648	 20	 1978
+ 89	 Zhigalko, Sergei	 g	 BLR	 2647	 20	 1989
+ 90	 Fedorchuk, Sergey A.	 g	 UKR	 2646	 13	 1981
+ 91	 Beliavsky, Alexander G	 g	 SLO	 2645	 25	 1953
+ 92	 Socko, Bartosz	 g	 POL	 2644	 18	 1978
+ 93	 Seirawan, Yasser	 g	 USA	 2644	 3	 1960
+ 94	 Milov, Vadim	 g	 SUI	 2644	 0	 1972
+ 95	 Andreikin, Dmitry	 g	 RUS	 2643	 5	 1990
+ 96	 Lastin, Alexander	 g	 RUS	 2643	 0	 1976
+ 97	 Giri, Anish	 g	 NED	 2642	 24	 1994
+ 98	 Savchenko, Boris	 g	 RUS	 2642	 17	 1986
+ 99	 Nguyen, Ngoc Truong Son	 g	 VIE	 2642	 0	 1990
+ 100	 Gustafsson, Jan	 g	 GER	 2640	 24	 1979
+ 101	 Cheparinov, Ivan	 g	 BUL	 2640	 11	 1986
+ 102	 Vuckovic, Bojan	 g	 SRB	 2640	 11	 1980
+ 103	 Sandipan, Chanda	 g	 IND	 2640	 2	 1983
